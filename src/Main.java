@@ -28,11 +28,39 @@ public class Main {
         System.out.println("(| o o |)");
         System.out.println("  | ^ |  ");
         System.out.println(" | '-' | ");
-        System.out.println(" +-----+" );
+        System.out.println(" +-----+ ");
 
         // zadanie 7
+        // todo
 
+        // zadanie 8
+        // todo
 
+        System.out.println("   +");
+        System.out.println("  + +");
+        System.out.println(" +   +");
+        System.out.println("+-----+");
+        System.out.println("| .-. |");
+        System.out.println("| | | |");
+        System.out.println("+-+-+-+");
 
+        // zadanie 9
+        // todo
+
+        // zadanie 10
+        System.out.print("film1 \nfilm2 \nfilm3\n");
+
+        // zadanie 11
+        System.out.println(
+                "Wisława Szymborska\n" +
+                "Z trapezu na\n" +
+                "trapez, w ciszy po");
+
+        // zadanie 12
+        System.out.println("******=========");
+        System.out.println("******=========");
+        System.out.println("******=========");
+        System.out.println("===============");
+        System.out.println("===============");
     }
 }
