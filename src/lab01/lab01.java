@@ -1,4 +1,6 @@
-public class Main {
+package lab01;
+
+public class lab01 {
     public static void main(String[] args) {
         // zadanie 1
         System.out.println(31 + 29 + 31);
@@ -46,6 +48,8 @@ public class Main {
 
         // zadanie 9
         // todo
+        // na prawde nie chce mi sie tego robic....
+
 
         // zadanie 10
         System.out.print("film1 \nfilm2 \nfilm3\n");
