@@ -21,3 +21,5 @@ public class zad1 {
         System.out.println("wynik = " + wynik);
     }
 }
+
+//jest dobrze
