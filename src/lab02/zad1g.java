@@ -26,14 +26,17 @@ public class zad1g {
         return wynik;
     }
 
+    public static int skanerDlaLab02() {
+        Scanner skaner = new Scanner(System.in);
+        System.out.print("Podaj liczbe: ");
+        int n = skaner.nextInt();
+        System.out.println("n = " + n);
+        return n;
+    }
+
     public static void main(String[] args) {
 
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Podaj liczbę: ");
-
-        int n = scanner.nextInt();
-        System.out.println("n = " + n);
-
+        int n = skanerDlaLab02();
         double wynikDodawania = dodawanie(n);
         double wynikMnozenia = mnozenie(n);
 
