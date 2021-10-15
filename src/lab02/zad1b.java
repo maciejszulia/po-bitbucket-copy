@@ -3,24 +3,30 @@ package lab02;
 import java.util.Scanner;
 
 public class zad1b {
+    public static int skanerDlaLab02() {
+        Scanner skaner = new Scanner(System.in);
+        System.out.print("Podaj liczbe: ");
+        int n = skaner.nextInt();
+        System.out.println("n = " + n);
+        return n;
+    }
+
+    public static double mnozenie(int n) {
+        double wynik = 1;
+        Scanner scannerDlaMnozenia = new Scanner(System.in);
+        for (int i = 0; i < n; i++) {
+            double liczba = scannerDlaMnozenia.nextDouble();
+            wynik *= liczba;
+        }
+        System.out.println("--endOfFunc--");
+        return wynik;
+    }
+
     public static void main(String[] args) {
 
-        //init scanner - zrob scanner
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Podaj liczbę: ");
+        int n = skanerDlaLab02();
+        double wynikMnozenia = mnozenie(n);
+        System.out.println("Wynik mnożenia = " + wynikMnozenia);
 
-        //liczba = zeskanuj kolejnego inta
-        int n = scanner.nextInt();
-        System.out.println("n = " + n);
-
-        double wynik = 1;
-        double[] tabLiczby = new double[n];
-        for (int i = 0; i < tabLiczby.length; i++) {
-            tabLiczby[i] = scanner.nextDouble();
-            wynik *= tabLiczby[i];
-            System.out.println(wynik);  //todo: mozna to zrobic inaczej: wynik *= liczba;
-        }
-
-        System.out.println("wynik = " + wynik);
     }
 }
