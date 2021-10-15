@@ -14,9 +14,9 @@ public class zad1h {
 
     public static double dzialanie(int n) {
         double wynik = 0, temp = 1;
-        Scanner scannerDlaOdejmowania = new Scanner(System.in);
+        Scanner skaner = new Scanner(System.in);
         for (int i = 0; i < n; i++) {
-            double liczba = scannerDlaOdejmowania.nextDouble();
+            double liczba = skaner.nextDouble();
             if (i % 2 == 0) {
                 wynik += liczba;
                 temp = liczba;
