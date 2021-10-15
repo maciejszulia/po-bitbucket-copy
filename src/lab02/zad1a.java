@@ -10,13 +10,13 @@ public class zad1a {
 
         System.out.println("Podaj liczbę: ");
 
-        int liczba = scanner.nextInt();
-        System.out.println("n = " + liczba);
+        int n = scanner.nextInt();
+        System.out.println("n = " + n);
 
         double wynik = 0;
-        for (int i = 0; i < liczba; i++) {
-            double n = scanner.nextDouble();
-            wynik += n;
+        for (int i = 0; i < n; i++) {
+            double liczba = scanner.nextDouble();
+            wynik += liczba;
         }
         System.out.println("wynik = " + wynik);
     }
