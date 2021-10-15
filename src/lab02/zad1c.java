@@ -8,6 +8,7 @@ public class zad1c {
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("Podaj liczbę: ");
+
         int n = scanner.nextInt();
         System.out.println("n = " + n);
 
