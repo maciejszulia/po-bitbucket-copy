@@ -14,14 +14,12 @@ public class zad1b {
         int liczba = scanner.nextInt();
         System.out.println("n = " + liczba);
 
+        double wynik = 1;
         double[] tabLiczby = new double[liczba];
         for (int i = 0; i < tabLiczby.length; i++) {
             tabLiczby[i] = scanner.nextDouble();
-        }
-
-        double wynik = 1;
-        for (int i = 0; i < tabLiczby.length; i++) {
             wynik *= tabLiczby[i];
+            System.out.println(wynik);  //mozna to zrobic inaczej: wynik *= liczba;
         }
 
         System.out.println("wynik = " + wynik);
