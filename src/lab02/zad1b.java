@@ -26,7 +26,7 @@ public class zad1b {
 
         int n = skanerDlaLab02();
         double wynikMnozenia = mnozenie(n);
-        System.out.println("Wynik mnożenia = " + wynikMnozenia);
+        System.out.println("Wynik mnozenia = " + wynikMnozenia);
 
     }
 }
