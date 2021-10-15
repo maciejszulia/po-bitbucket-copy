@@ -13,12 +13,12 @@ public class zad1c {
         return n;
     }
 
-    public static double mnozenieAbs(int n) {
-        double wynik = 1;
-        Scanner scannerDlaMnozenia = new Scanner(System.in);
+    public static double dodawanieAbs(int n) {
+        double wynik = 0;
+        Scanner scannerDlaDodawania = new Scanner(System.in);
         for (int i = 0; i < n; i++) {
-            double liczba = scannerDlaMnozenia.nextDouble();
-            wynik *= Math.abs(liczba);
+            double liczba = scannerDlaDodawania.nextDouble();
+            wynik += Math.abs(liczba);
         }
         System.out.println("--endOfFunc--");
         return wynik;
@@ -28,8 +28,8 @@ public class zad1c {
     public static void main(String[] args) {
 
         int n = skanerDlaLab02();
-        double wynikMnozeniaAbs = mnozenieAbs(n);
+        double wynikDodawaniaAbs = dodawanieAbs(n);
 
-        System.out.println("Wynik mnozenia z wartosci bezwzglednych = " + wynikMnozeniaAbs);
+        System.out.println("Wynik dodawania z wartosci bezwzglednych = " + wynikDodawaniaAbs);
     }
 }
