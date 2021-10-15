@@ -3,23 +3,37 @@ package lab02;
 import java.util.Scanner;
 
 public class zad1h {
+
+    public static int skanerDlaLab02() {
+        Scanner skaner = new Scanner(System.in);
+        System.out.print("Podaj liczbe: ");
+        int n = skaner.nextInt();
+        System.out.println("n = " + n);
+        return n;
+    }
+
+    public static double dzialanie(int n) {
+        double wynik = 0, temp = 1;
+        Scanner scannerDlaOdejmowania = new Scanner(System.in);
+        for (int i = 0; i < n; i++) {
+            double liczba = scannerDlaOdejmowania.nextDouble();
+            if (i % 2 == 0) {
+                wynik += liczba;
+                temp = liczba;
+            } else {
+                wynik -= liczba;
+                temp = liczba;
+            }
+        }
+        System.out.println("--endOfFunc--");
+        return wynik + Math.pow(-1, n + 1) * temp;
+    }
+
     public static void main(String[] args) {
 
-        //init scanner
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Podaj liczbę: ");
+        int n = skanerDlaLab02();
+        double wynikDzialania = dzialanie(n);
 
-        int n = scanner.nextInt();
-        System.out.println("n = " + n);
-
-        double wynik = 0;
-        for (int i = 0; i < n; i++) {
-            double liczba = scanner.nextDouble();
-            wynik += liczba;
-            System.out.println(wynik);
-        }
-        System.out.println("wynik = " + wynik);
+        System.out.println(wynikDzialania);
     }
 }
-
-//jest dobrze
