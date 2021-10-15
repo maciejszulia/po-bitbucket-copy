@@ -10,6 +10,7 @@ public class zad1a {
         System.out.println("n = " + n);
         return n;
     }
+
     public static double dodawanie(int n) {
         double wynik = 0;
         Scanner scannerDlaDodawania = new Scanner(System.in);
@@ -20,6 +21,7 @@ public class zad1a {
         System.out.println("--endOfFunc--");
         return wynik;
     }
+
     public static void main(String[] args) {
 
         int n = skanerDlaLab02();
