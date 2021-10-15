@@ -2,7 +2,7 @@ package lab02;
 
 import java.util.Scanner;
 
-public class zad2 {
+public class zad1b {
     public static void main(String[] args) {
 
         //init scanner - zrob scanner
