@@ -2,12 +2,10 @@ package lab02;
 
 import java.util.Scanner;
 
-public class zad1a {
+public class zad1f {
     public static void main(String[] args) {
 
-        //init scanner
         Scanner scanner = new Scanner(System.in);
-
         System.out.println("Podaj liczbę: ");
 
         int n = scanner.nextInt();
@@ -16,7 +14,7 @@ public class zad1a {
         double wynik = 0;
         for (int i = 0; i < n; i++) {
             double liczba = scanner.nextDouble();
-            wynik += liczba;
+            wynik += Math.pow(liczba, 2); //do potegi drugiej
             System.out.println(wynik);
         }
         System.out.println("wynik = " + wynik);
