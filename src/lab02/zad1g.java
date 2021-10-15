@@ -9,8 +9,20 @@ public class zad1g {
         Scanner scannerDlaDodawania = new Scanner(System.in);
         for (int i = 0; i < n; i++) {
             double liczba = scannerDlaDodawania.nextDouble();
-            wynik +=liczba;
+            wynik += liczba;
         }
+        System.out.println("koniec funkcji dodawanie");
+        return wynik;
+    }
+
+    public static double mnozenie(int n) {
+        double wynik = 1;
+        Scanner scannerDlaMnozenia = new Scanner(System.in);
+        for (int i = 0; i < n; i++) {
+            double liczba = scannerDlaMnozenia.nextDouble();
+            wynik *= liczba;
+        }
+        System.out.println("koniec funkcji mnozenie");
         return wynik;
     }
 
@@ -23,8 +35,8 @@ public class zad1g {
         System.out.println("n = " + n);
 
         double wynikDodawania = dodawanie(n);
-        double wynikMnozenia;
+        double wynikMnozenia = mnozenie(n);
 
-        System.out.println("wynik dodawania = " + wynikDodawania + " wynik mnozenia = ");
+        System.out.println("wynik dodawania = " + wynikDodawania + " wynik mnozenia = "+ wynikMnozenia);
     }
 }
