@@ -3,22 +3,32 @@ package lab02;
 import java.util.Scanner;
 
 public class zad1e {
+
+    public static int skanerDlaLab02() {
+        Scanner skaner = new Scanner(System.in);
+        System.out.print("Podaj liczbe: ");
+        int n = skaner.nextInt();
+        System.out.println("n = " + n);
+        return n;
+    }
+
+    public static double mnozenieAbs(int n) {
+        double wynik = 1;
+        Scanner scannerDlaMnozenia = new Scanner(System.in);
+        for (int i = 0; i < n; i++) {
+            double liczba = scannerDlaMnozenia.nextDouble();
+            wynik *= Math.abs(liczba);
+        }
+        System.out.println("--endOfFunc--");
+        return wynik;
+    }
+
     public static void main(String[] args) {
 
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Podaj liczbę: ");
+        int n = skanerDlaLab02();
+        double wynikMnozenieAbs = mnozenieAbs(n);
 
-        int n = scanner.nextInt();
-        System.out.println("n = " + n);
+        System.out.println("Wynik mnozenia |a1| * |a2| * ... * |an| = " + wynikMnozenieAbs);
 
-        double wynik = 1;
-        double[] tabLiczby = new double[n];
-        for (int i = 0; i < tabLiczby.length; i++) {
-            tabLiczby[i] = scanner.nextDouble();
-            wynik *= Math.abs(tabLiczby[i]);
-            System.out.println(wynik);  //todo: mozna to zrobic inaczej: wynik *= liczba;
-        }
-
-        System.out.println("wynik = " + wynik);
     }
 }

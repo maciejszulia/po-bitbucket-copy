@@ -11,7 +11,7 @@ public class zad1g {
             double liczba = scannerDlaDodawania.nextDouble();
             wynik += liczba;
         }
-        System.out.println("koniec funkcji dodawanie");
+        System.out.println("--endOfFunc--");
         return wynik;
     }
 
@@ -22,7 +22,7 @@ public class zad1g {
             double liczba = scannerDlaMnozenia.nextDouble();
             wynik *= liczba;
         }
-        System.out.println("koniec funkcji mnozenie");
+        System.out.println("--endOfFunc--");
         return wynik;
     }
 
@@ -37,6 +37,6 @@ public class zad1g {
         double wynikDodawania = dodawanie(n);
         double wynikMnozenia = mnozenie(n);
 
-        System.out.println("wynik dodawania = " + wynikDodawania + " wynik mnozenia = "+ wynikMnozenia);
+        System.out.println("wynik dodawania = " + wynikDodawania + " wynik mnozenia = " + wynikMnozenia);
     }
 }
