@@ -34,6 +34,6 @@ public class zad1h {
         int n = skanerDlaLab02();
         double wynikDzialania = dzialanie(n);
 
-        System.out.println(wynikDzialania);
+        System.out.println("Wynik dzialania z podpunktu h = " + wynikDzialania);
     }
 }
