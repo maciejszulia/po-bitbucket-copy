@@ -22,9 +22,10 @@ public class zad1 {
         int i = 0;
         while (i != n) {
             tab[i] = rand.nextInt(1000 + 999) - 999;
-            System.out.println(tab[i]);
+            System.out.print(tab[i] + ", ");
             i++;
         }
+        System.out.println();
 
         // a)
         i = 0;
@@ -83,5 +84,83 @@ public class zad1 {
             i++;
         }
         System.out.println("Suma dodatnich = " + positiveSum + " suma ujemnych = " + negativeSum);
+
+        //e)
+        int count1 = 0, count2 = 0;
+        i = 0;
+        while (i != n) {
+            if (tab[i] > 0)
+                count1++;
+            if (tab[i] < 0) {
+                if (count1 < count2)
+                    count1 = 0;
+                else {
+                    count2 = count1;
+                    count1 = 0;
+                }
+            }
+            i++;
+        }
+        System.out.println("Długosc najdłuzszego fragmentu tablicy, w którym wszystkie elementy sa dodatnie: " + count2);
+
+        //f)
+        i = 0;
+        while (i != n) {
+            if (tab[i] > 0) {
+                tab[i] = 1;
+            }
+            if (tab[i] < 0)
+                tab[i] = -1;
+            i++;
+        }
+
+        i = 0;
+        while (i != n) {
+            System.out.print(tab[i] + ", ");
+            i++;
+        }
+        System.out.println();
+
+        //g)
+        int lewy = skaner.nextInt();
+        while (!(1 <= lewy && lewy < n)) {
+            System.out.println("1 <= lewy < n");
+            lewy = skaner.nextInt();
+        }
+
+        int prawy = skaner.nextInt();
+        while (!(1 <= prawy && prawy < n)) {
+            System.out.println("1 <= prawy < n");
+            prawy = skaner.nextInt();
+        }
+
+        if (prawy < lewy) {
+            int temp;
+            temp = lewy;
+            lewy = prawy;
+            prawy = temp;
+        }
+        System.out.println("lewy = " + lewy + " prawy = " + prawy);
+
+        int temp;
+        for (i = 0; i <= n - 1; i++) {
+            for (int j = n - 1; j >= 0; j--) {
+                if (lewy - 1 >= prawy - 1)
+                    break;
+                if (i == lewy - 1 && j == prawy - 1) {
+                    temp = tab[lewy - 1];
+                    tab[lewy - 1] = tab[prawy - 1];
+                    tab[prawy - 1] = temp;
+                    lewy++;
+                    prawy--;
+                }
+            }
+        }
+        for (i = 0; i <= n - 1; i++) {
+            System.out.println(tab[i]);
+        }
+        System.out.println(n);
+
     }
 }
+
