@@ -1,9 +1,8 @@
-package lab02;
+package lista01;
 
 import java.util.Scanner;
-import java.lang.Math;
 
-public class zad22 {
+public class zad21b {
     public static int skanerDlaLab02() {
         Scanner skaner = new Scanner(System.in);
         System.out.print("Podaj liczbe: ");
@@ -16,17 +15,16 @@ public class zad22 {
 
         Scanner skaner = new Scanner(System.in);
         int n = skanerDlaLab02();
-        double[] tablica = new double[n];
+        int[] tablica = new int[n];
 
         int i = 0, output = 0;
-        double wynik = 0;
         while (i != tablica.length) {
-            tablica[i] = skaner.nextDouble();
-            if (tablica[i]>0)
-                wynik += (tablica[i]*2);
+            tablica[i] = skaner.nextInt();
+            if (tablica[i] % 3 == 0 && tablica[i] % 5 == 1)
+                output++;
             i++;
         }
-        System.out.println("Wynik = " + wynik);
+        System.out.println("Liczba takich liczb: " + output);
     }
 
 }

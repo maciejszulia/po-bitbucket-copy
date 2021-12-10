@@ -1,8 +1,8 @@
-package lab02;
+package lista01;
 
 import java.util.Scanner;
 
-public class zad1b {
+public class zad1a {
     public static int skanerDlaLab02() {
         Scanner skaner = new Scanner(System.in);
         System.out.print("Podaj liczbe: ");
@@ -11,12 +11,12 @@ public class zad1b {
         return n;
     }
 
-    public static double mnozenie(int n) {
-        double wynik = 1;
-        Scanner scannerDlaMnozenia = new Scanner(System.in);
+    public static double dodawanie(int n) {
+        double wynik = 0;
+        Scanner scannerDlaDodawania = new Scanner(System.in);
         for (int i = 0; i < n; i++) {
-            double liczba = scannerDlaMnozenia.nextDouble();
-            wynik *= liczba;
+            double liczba = scannerDlaDodawania.nextDouble();
+            wynik += liczba;
         }
         System.out.println("--endOfFunc--");
         return wynik;
@@ -26,8 +26,9 @@ public class zad1b {
 
         int n = skanerDlaLab02();
 
-        double wynikMnozenia = mnozenie(n);
-        System.out.println("Wynik mnozenia = " + wynikMnozenia);
-
+        double wynikDodawania = dodawanie(n);
+        System.out.println("Wynik dodawania = " + wynikDodawania);
     }
 }
+
+//jest dobrze

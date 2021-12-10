@@ -1,7 +1,6 @@
-package lab03;
+package lista02;
 
 import java.util.Scanner;
-import java.lang.Math;
 import java.util.Random;
 
 //

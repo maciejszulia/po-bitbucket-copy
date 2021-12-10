@@ -1,8 +1,9 @@
-package lab02;
+package lista01;
 
 import java.util.Scanner;
+import java.lang.Math;
 
-public class zad1e {
+public class zad1c {
 
     public static int skanerDlaLab02() {
         Scanner skaner = new Scanner(System.in);
@@ -12,23 +13,23 @@ public class zad1e {
         return n;
     }
 
-    public static double mnozenieAbs(int n) {
-        double wynik = 1;
-        Scanner scannerDlaMnozenia = new Scanner(System.in);
+    public static double dodawanieAbs(int n) {
+        double wynik = 0;
+        Scanner scannerDlaDodawania = new Scanner(System.in);
         for (int i = 0; i < n; i++) {
-            double liczba = scannerDlaMnozenia.nextDouble();
-            wynik *= Math.abs(liczba);
+            double liczba = scannerDlaDodawania.nextDouble();
+            wynik += Math.abs(liczba);
         }
         System.out.println("--endOfFunc--");
         return wynik;
     }
 
+
     public static void main(String[] args) {
 
         int n = skanerDlaLab02();
-        double wynikMnozenieAbs = mnozenieAbs(n);
+        double wynikDodawaniaAbs = dodawanieAbs(n);
 
-        System.out.println("Wynik mnozenia |a1| * |a2| * ... * |an| = " + wynikMnozenieAbs);
-
+        System.out.println("Wynik dodawania z wartosci bezwzglednych = " + wynikDodawaniaAbs);
     }
 }

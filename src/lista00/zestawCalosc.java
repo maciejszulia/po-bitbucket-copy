@@ -1,13 +1,13 @@
-package lab01;
+package lista00;
 
-public class lab01 {
+public class zestawCalosc {
     public static void main(String[] args) {
         // zadanie 1
         System.out.println(31 + 29 + 31);
         // zadanie 2
         System.out.println(1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10);
         // zadanie 3
-        System.out.println(1 * 2 * 3 * 4 * 5 * 6 * 7 * 8 * 9 * 10);
+        System.out.println(2 * 3 * 4 * 5 * 6 * 7 * 8 * 9 * 10);
         // zadanie 4
         double a;
         double b;

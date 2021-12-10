@@ -1,9 +1,8 @@
-package lab02;
+package lista01;
 
 import java.util.Scanner;
-import java.lang.Math;
 
-public class zad23 {
+public class zad22 {
     public static int skanerDlaLab02() {
         Scanner skaner = new Scanner(System.in);
         System.out.print("Podaj liczbe: ");
@@ -18,19 +17,15 @@ public class zad23 {
         int n = skanerDlaLab02();
         double[] tablica = new double[n];
 
-        int i = 0;
-        int dodatnie = 0, ujemne = 0, zera = 0;
+        int i = 0, output = 0;
+        double wynik = 0;
         while (i != tablica.length) {
             tablica[i] = skaner.nextDouble();
-            if (tablica[i] > 0)
-                dodatnie++;
-            if (tablica[i] < 0)
-                ujemne++;
-            if (tablica[i] == 0)
-                zera++;
+            if (tablica[i]>0)
+                wynik += (tablica[i]*2);
             i++;
         }
-        System.out.println("Dodatnie = " + dodatnie + " ujemne = " + ujemne + " zera = " + zera);
+        System.out.println("Wynik = " + wynik);
     }
 
 }

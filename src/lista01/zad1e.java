@@ -1,8 +1,8 @@
-package lab02;
+package lista01;
 
 import java.util.Scanner;
 
-public class zad1f {
+public class zad1e {
 
     public static int skanerDlaLab02() {
         Scanner skaner = new Scanner(System.in);
@@ -12,12 +12,12 @@ public class zad1f {
         return n;
     }
 
-    public static double dodawaniePoteg(int n) {
-        double wynik = 0;
-        Scanner scannerDlaDodawania = new Scanner(System.in);
+    public static double mnozenieAbs(int n) {
+        double wynik = 1;
+        Scanner scannerDlaMnozenia = new Scanner(System.in);
         for (int i = 0; i < n; i++) {
-            double liczba = scannerDlaDodawania.nextDouble();
-            wynik += Math.pow(liczba, 2);
+            double liczba = scannerDlaMnozenia.nextDouble();
+            wynik *= Math.abs(liczba);
         }
         System.out.println("--endOfFunc--");
         return wynik;
@@ -26,11 +26,9 @@ public class zad1f {
     public static void main(String[] args) {
 
         int n = skanerDlaLab02();
-        double wynikDodawaniePoteg = dodawaniePoteg(n);
+        double wynikMnozenieAbs = mnozenieAbs(n);
 
-        System.out.println("Wynik dodawania a1^2 + a2^2 + ... + an^2 = " + wynikDodawaniePoteg);
+        System.out.println("Wynik mnozenia |a1| * |a2| * ... * |an| = " + wynikMnozenieAbs);
 
     }
 }
-
-//jest dobrze

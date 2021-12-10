@@ -1,10 +1,6 @@
-package lab05;
+package lista04;
 
 
-import java.lang.StringBuffer;
-import java.io.*;
-import java.math.*;
-import java.util.Scanner;
 
 import static java.lang.Character.*;
 
@@ -21,7 +17,7 @@ public class zad1 {
 
     static int countSubStr(String str, String subStr) {
         int count = 0;
-        StringBuffer sb = new StringBuffer(str);
+        StringBuilder sb = new StringBuilder(str);
         if (sb.length() > str.length()) {
             return 0;
         }
@@ -143,7 +139,7 @@ public class zad1 {
         //e
         String sE = "hehehihihehe";
         String subE = "he";
-        int[] tab = where(s, sub);
+        int[] tab = where(sE, subE);
         for (int index : tab) {
             System.out.print(index + " ");
         }
