@@ -40,6 +40,22 @@ public class zad1 {
         return output;
     }
 
+    public static ArrayList<Integer> reversed(ArrayList<Integer> a) {
+        ArrayList<Integer> output = new ArrayList<>();
+        int i = a.size() - 1;
+        while (i != -1) {
+            output.add(a.get(i));
+            i--;
+        }
+        return output;
+    }
+
+    public static void reverse(ArrayList<Integer> a){
+        ArrayList<Integer>temp = reversed(a);
+        a.clear();
+        a.addAll(temp);
+    }
+
     public static void main(String[] args) {
 
         ArrayList<Integer> list1 = new ArrayList<>();
@@ -56,15 +72,20 @@ public class zad1 {
         System.out.println("Lista1: " + list1);
         System.out.println("Lista2: " + list2);
 
-        //zad1
-        ArrayList<Integer> listZad1 = append(list1, list2);
-        System.out.println("ListaZad1: " + listZad1);
+        // zad1
+        System.out.println("ListaZad1: " + append(list1, list2));
 
-        //zad2
-        ArrayList<Integer> listZad2 = merge(list1, list2);
-        System.out.println("ListaZad2: " + listZad2);
-        //zad2
-        ArrayList<Integer> listZad3 = mergeSorted(list1, list2);
-        System.out.println("ListaZad3: " + listZad3);
+        // zad2
+        System.out.println("ListaZad2: " + merge(list1, list2));
+
+        // zad3
+        System.out.println("ListaZad3: " + mergeSorted(list1, list2));
+
+        // zad4
+        System.out.println("ListaZad4: " + reversed(list1));
+
+        // zad5
+        reverse(list2);
+        System.out.println("ListaZad5: " + list2);
     }
 }
