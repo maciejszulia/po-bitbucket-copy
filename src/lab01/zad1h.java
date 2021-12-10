@@ -1,8 +1,8 @@
-package lab02;
+package lab01;
 
 import java.util.Scanner;
 
-public class zad1i {
+public class zad1h {
 
     public static int skanerDlaLab02() {
         Scanner skaner = new Scanner(System.in);
@@ -12,29 +12,21 @@ public class zad1i {
         return n;
     }
 
-    public static long silnia(int n) {
-        long silnia = 1;
-        for (int i = 2; i <= n; i++) {
-            silnia = silnia * i;
-        }
-        return silnia;
-    }
-
     public static double dzialanie(int n) {
         double wynik = 0, temp = 1;
         Scanner skaner = new Scanner(System.in);
         for (int i = 0; i < n; i++) {
             double liczba = skaner.nextDouble();
             if (i % 2 == 0) {
-                wynik -= liczba/(double) silnia(i+1);
+                wynik += liczba;
                 temp = liczba;
             } else {
-                wynik += liczba/(double) silnia(i+1);
+                wynik -= liczba;
                 temp = liczba;
             }
         }
         System.out.println("--endOfFunc--");
-        return wynik + (Math.pow(-1, n + 1) * temp)/silnia(n);
+        return wynik + Math.pow(-1, n + 1) * temp;
     }
 
     public static void main(String[] args) {
@@ -42,6 +34,6 @@ public class zad1i {
         int n = skanerDlaLab02();
         double wynikDzialania = dzialanie(n);
 
-        System.out.println("Wynik dzialania z podpunktu i = " + wynikDzialania);
+        System.out.println("Wynik dzialania z podpunktu h = " + wynikDzialania);
     }
 }

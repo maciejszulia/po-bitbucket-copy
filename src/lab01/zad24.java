@@ -1,9 +1,8 @@
-package lab02;
-
+package lab01;
 
 import java.util.Scanner;
 
-public class zad12 {
+public class zad24 {
     public static int skanerDlaLab02() {
         Scanner skaner = new Scanner(System.in);
         System.out.print("Podaj liczbe: ");
@@ -16,19 +15,20 @@ public class zad12 {
 
         Scanner skaner = new Scanner(System.in);
         int n = skanerDlaLab02();
-        int i=0;
         double[] tablica = new double[n];
-        while(i!=n){
-            tablica[i] =  skaner.nextDouble();
-            System.out.println(tablica[i]);
-            i++;
-        }
 
-        i=1;
-        while (i!=n-1){
-            System.out.println(tablica[i]);
+        int i = 0;
+        double smallest = tablica[0], biggest = tablica[0];
+        while (i != tablica.length) {
+            tablica[i] = skaner.nextDouble();
+            if (tablica[i] < smallest)
+                smallest = tablica[i];
+            if (tablica[i] > biggest)
+                biggest = tablica[i];
             i++;
         }
-        System.out.println(tablica[0]);
+        System.out.println("Najmniejsza = " + smallest + " najwieksza = " + biggest);
     }
+
 }
+

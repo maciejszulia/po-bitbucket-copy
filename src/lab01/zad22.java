@@ -1,7 +1,6 @@
-package lab02;
+package lab01;
 
 import java.util.Scanner;
-import java.lang.Math;
 
 public class zad22 {
     public static int skanerDlaLab02() {

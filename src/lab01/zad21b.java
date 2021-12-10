@@ -1,9 +1,8 @@
-package lab02;
+package lab01;
 
 import java.util.Scanner;
-import java.lang.Math;
 
-public class zad24 {
+public class zad21b {
     public static int skanerDlaLab02() {
         Scanner skaner = new Scanner(System.in);
         System.out.print("Podaj liczbe: ");
@@ -16,19 +15,16 @@ public class zad24 {
 
         Scanner skaner = new Scanner(System.in);
         int n = skanerDlaLab02();
-        double[] tablica = new double[n];
+        int[] tablica = new int[n];
 
-        int i = 0;
-        double smallest = tablica[0], biggest = tablica[0];
+        int i = 0, output = 0;
         while (i != tablica.length) {
-            tablica[i] = skaner.nextDouble();
-            if (tablica[i] < smallest)
-                smallest = tablica[i];
-            if (tablica[i] > biggest)
-                biggest = tablica[i];
+            tablica[i] = skaner.nextInt();
+            if (tablica[i] % 3 == 0 && tablica[i] % 5 == 1)
+                output++;
             i++;
         }
-        System.out.println("Najmniejsza = " + smallest + " najwieksza = " + biggest);
+        System.out.println("Liczba takich liczb: " + output);
     }
 
 }

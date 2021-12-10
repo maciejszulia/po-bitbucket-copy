@@ -1,9 +1,9 @@
-package lab02;
+package lab01;
 
 import java.util.Scanner;
 import java.lang.Math;
 
-public class zad23 {
+public class zad21c {
     public static int skanerDlaLab02() {
         Scanner skaner = new Scanner(System.in);
         System.out.print("Podaj liczbe: ");
@@ -16,21 +16,16 @@ public class zad23 {
 
         Scanner skaner = new Scanner(System.in);
         int n = skanerDlaLab02();
-        double[] tablica = new double[n];
+        int[] tablica = new int[n];
 
-        int i = 0;
-        int dodatnie = 0, ujemne = 0, zera = 0;
+        int i = 0, output = 0;
         while (i != tablica.length) {
-            tablica[i] = skaner.nextDouble();
-            if (tablica[i] > 0)
-                dodatnie++;
-            if (tablica[i] < 0)
-                ujemne++;
-            if (tablica[i] == 0)
-                zera++;
+            tablica[i] = skaner.nextInt();
+            if (Math.sqrt(tablica[i]) == (int)Math.sqrt(tablica[i]))
+                output++;
             i++;
         }
-        System.out.println("Dodatnie = " + dodatnie + " ujemne = " + ujemne + " zera = " + zera);
+        System.out.println("Liczba takich liczb: " + output);
     }
 
 }

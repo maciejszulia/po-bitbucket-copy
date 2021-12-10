@@ -1,8 +1,8 @@
-package lab02;
+package lab01;
 
 import java.util.Scanner;
 
-public class zad21b {
+public class zad21a {
     public static int skanerDlaLab02() {
         Scanner skaner = new Scanner(System.in);
         System.out.print("Podaj liczbe: ");
@@ -17,14 +17,14 @@ public class zad21b {
         int n = skanerDlaLab02();
         int[] tablica = new int[n];
 
-        int i = 0, output = 0;
+        int i = 0, checkIfOdd = 0;
         while (i != tablica.length) {
             tablica[i] = skaner.nextInt();
-            if (tablica[i] % 3 == 0 && tablica[i] % 5 == 1)
-                output++;
+            if (tablica[i] % 2 == 1)
+                checkIfOdd++;
             i++;
         }
-        System.out.println("Liczba takich liczb: " + output);
+        System.out.println("Liczba nieparzystych: " + checkIfOdd);
     }
 
 }
