@@ -16,16 +16,16 @@ public class zad12 {
 
         Scanner skaner = new Scanner(System.in);
         int n = skanerDlaLab02();
-        int i=0;
+        int i = 0;
         double[] tablica = new double[n];
-        while(i!=n){
-            tablica[i] =  skaner.nextDouble();
+        while (i != n) {
+            tablica[i] = skaner.nextDouble();
             System.out.println(tablica[i]);
             i++;
         }
 
-        i=1;
-        while (i!=n-1){
+        i = 1;
+        while (i != n - 1) {
             System.out.println(tablica[i]);
             i++;
         }
