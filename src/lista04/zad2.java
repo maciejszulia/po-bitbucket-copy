@@ -1,4 +1,4 @@
-package lab05;
+package lista04;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -22,7 +22,7 @@ public class zad2 {
 
     public static void main(String[] args) throws FileNotFoundException {
 
-        System.out.println(countCharFromFile("C:\\Users\\macie\\IdeaProjects\\programowanie-obiektowe\\src\\lab05\\file",'a'));
+        System.out.println(countCharFromFile("C:\\Users\\macie\\IdeaProjects\\programowanie-obiektowe\\src\\lista04\\file", 'a'));
 
     }
 }
