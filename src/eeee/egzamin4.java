@@ -1,4 +1,4 @@
-package egzamin;
+package eeee;
 
 public class egzamin4 {
 }

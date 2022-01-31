@@ -1,4 +1,4 @@
-package egzamin;
+package eeee;
 
 
 import java.math.BigInteger;
